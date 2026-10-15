@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "microct3d: 3D morphometry of cortical bone porosity from micro-CT"
+version: 1.0.2
+date-released: 2026-10-14
+license: MIT
+repository-code: "https://github.com/rielieliss/microct_3Dmorphometry"
+authors:
+  - family-names: Schulz
+    given-names: Riéli Elis
+keywords:
+  - micro-CT
+  - cortical porosity
+  - bone morphometry
+  - Haversian canals

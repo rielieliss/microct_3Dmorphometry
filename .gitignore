@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+
+# Never commit image data or results: they may contain patient information
+*.tif
+*.tiff
+*.bmp
+*.png
+*.isq
+*.ISQ
+*.zip
+*.stl
+*.npz
+*.csv
+*.xlsx
+!docs/**/*.png
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

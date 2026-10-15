@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "microct3d"
+version = "1.0.2"
+description = "3D morphometry of cortical bone porosity from micro-CT: CTAn-equivalent parameters plus canal network, calibre and size bands"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Riéli Elis Schulz" }]
+keywords = ["micro-CT", "bone", "cortical porosity", "morphometry", "Haversian canals", "image analysis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-image>=0.21",
+    "connected-components-3d>=3.12",
+    "edt>=2.3",
+    "tifffile>=2023.1",
+    "pillow>=9.0",
+]
+
+[project.optional-dependencies]
+gpu = ["torch>=2.0"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+microct3d = "microct3d.cli:main"
+
+[project.urls]
+Repository = "https://github.com/rielieliss/microct_3Dmorphometry"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
